@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">PowerBankSim</string>
+    <string name="recharge_dialog_detail">付款方式</string>
+    <string name="recharge_dialog_mywallet">我的钱包</string>
+    <string name="recharge_dialog_choose">请选择支付方式</string>
+    <string name="recharge_dialog_zhifubao">支付宝</string>
+    <string name="recharge_dialog_wechat">微信</string>
+    <string name="recharge_dialog_need">需要付款</string>
+    <string name="recharge_dialog_confirm">确认</string>
+</resources>
