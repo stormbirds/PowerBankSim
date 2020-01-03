@@ -1,4 +1,4 @@
-package cn.stormbirds.powerbanksim;
+package cn.stormbirds.powerbanksim.mqtt;
 
 
 /**

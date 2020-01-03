@@ -1,9 +1,8 @@
-package cn.stormbirds.powerbanksim;
+package cn.stormbirds.powerbanksim.utils;
 
 
 import android.app.Dialog;
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
@@ -16,6 +15,9 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+
+import cn.stormbirds.powerbanksim.R;
+import cn.stormbirds.powerbanksim.api.IPayResultListener;
 
 /**
  * Copyright (c) 小宝 @2019
@@ -53,13 +55,13 @@ public class PayWayDialog extends Dialog implements View.OnClickListener {
     /** 区别三种支付方式 0:我的钱包 1:支付宝 2:微信支付 **/
     public static int payWay = 0;
 
-    private PayResultListener mPayResultListener;
+    private IPayResultListener mIPayResultListener;
 
 
-    protected PayWayDialog(@NonNull Context context, PayResultListener payResultListener, boolean isRecharge, boolean cancelable, @Nullable OnCancelListener cancelListener) {
+    public PayWayDialog(@NonNull Context context, IPayResultListener IPayResultListener, boolean isRecharge, boolean cancelable, @Nullable OnCancelListener cancelListener) {
         super(context, cancelable, cancelListener);
         this.isRecharge = isRecharge;
-        this.mPayResultListener = payResultListener;
+        this.mIPayResultListener = IPayResultListener;
     }
 
     @Override
@@ -126,11 +128,11 @@ public class PayWayDialog extends Dialog implements View.OnClickListener {
         switch (view.getId()) {
             case R.id.recharge_dialog_right:
                 dismiss();
-                mPayResultListener.payResult(-1,"取消支付");
+                mIPayResultListener.payResult(-1,"取消支付");
                 break;
             case R.id.dialog_confirm_pay:
                 dismiss();
-                mPayResultListener.payResult(1,"支付成功");
+                mIPayResultListener.payResult(1,"支付成功");
                 break;
             case R.id.dialog_my_wallet:
                 rechargeWalletCB.setVisibility(View.VISIBLE);

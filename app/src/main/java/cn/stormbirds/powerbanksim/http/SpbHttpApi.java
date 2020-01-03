@@ -1,6 +1,7 @@
-package cn.stormbirds.powerbanksim;
+package cn.stormbirds.powerbanksim.http;
 
 
+import cn.stormbirds.powerbanksim.domain.ResultJson;
 import retrofit2.http.POST;
 import retrofit2.http.Query;
 import rx.Observable;

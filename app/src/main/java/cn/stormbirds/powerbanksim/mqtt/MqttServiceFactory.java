@@ -1,7 +1,9 @@
-package cn.stormbirds.powerbanksim;
+package cn.stormbirds.powerbanksim.mqtt;
 
 
 import android.content.Context;
+
+import cn.stormbirds.powerbanksim.mqtt.MQTTManager;
 
 /**
  * Copyright (c) 小宝 @2019

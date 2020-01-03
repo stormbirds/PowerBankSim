@@ -1,4 +1,4 @@
-package cn.stormbirds.powerbanksim;
+package cn.stormbirds.powerbanksim.mqtt;
 
 import android.content.Context;
 import android.util.Log;
@@ -15,6 +15,9 @@ import org.eclipse.paho.client.mqttv3.MqttMessage;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
+
+import cn.stormbirds.powerbanksim.mqtt.MQTTCons;
+import cn.stormbirds.powerbanksim.mqtt.MacSignature;
 
 public class MQTTManager {
 

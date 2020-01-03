@@ -1,4 +1,4 @@
-package cn.stormbirds.powerbanksim;
+package cn.stormbirds.powerbanksim.api;
 
 
 /**
@@ -11,6 +11,6 @@ package cn.stormbirds.powerbanksim;
  */
 
 
-public interface PayResultListener {
+public interface IPayResultListener {
     public void payResult(int code, String result);
 }

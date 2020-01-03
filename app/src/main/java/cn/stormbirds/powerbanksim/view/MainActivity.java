@@ -1,17 +1,24 @@
-package cn.stormbirds.powerbanksim;
+package cn.stormbirds.powerbanksim.view;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import cn.stormbirds.powerbanksim.http.HttpApi;
+import cn.stormbirds.powerbanksim.mqtt.MQTTManager;
+import cn.stormbirds.powerbanksim.mqtt.MqttServiceFactory;
+import cn.stormbirds.powerbanksim.api.IPayResultListener;
+import cn.stormbirds.powerbanksim.utils.PayWayDialog;
+import cn.stormbirds.powerbanksim.R;
+import cn.stormbirds.powerbanksim.domain.ResultJson;
 import rx.Observer;
 
 import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity implements PayResultListener{
+public class MainActivity extends AppCompatActivity implements IPayResultListener {
 
     private MQTTManager mqttManager;
     private PayWayDialog dialog;

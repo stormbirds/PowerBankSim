@@ -1,8 +1,10 @@
-package cn.stormbirds.powerbanksim;
+package cn.stormbirds.powerbanksim.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import cn.stormbirds.powerbanksim.R;
 
 public class DeviceActivity extends AppCompatActivity {
 

@@ -1,6 +1,7 @@
-package cn.stormbirds.powerbanksim;
+package cn.stormbirds.powerbanksim.http;
 
 
+import cn.stormbirds.powerbanksim.domain.ResultJson;
 import rx.Observable;
 import rx.Observer;
 import rx.android.schedulers.AndroidSchedulers;
